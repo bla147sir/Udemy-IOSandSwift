@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         }
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        request.predicate = NSPredicate(format: "username = %@", "Tara") // return the username called Tara only
         request.returnsObjectsAsFaults = false
         
         do {
